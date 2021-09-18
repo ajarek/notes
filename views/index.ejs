@@ -1,0 +1,21 @@
+<%-include('./partials/header')%>
+<%-include('./partials/navbar')%>
+    
+    <div class="container p-2 d-flex flex-column align-items-center">
+
+        <%notes.forEach(note=>{%>
+        <div class="card border-secondary mb-3" style="width: 18rem;">
+            <div class="card-header"><%= note.title %></div>
+            <div class="card-body text-secondary">
+                <p class="card-text"><%= note.content %></p>
+                <p>
+                    <a href="#" class="btn-sm btn-primary text-decoration-none ">edytuj</a>
+                    <a href="#" class="btn-sm btn-danger text-decoration-none">usuń</a>
+                </p>
+            </div>
+        </div>
+        <%})%>
+
+    </div>
+    
+    <%- include('./partials/footer.ejs') %>
