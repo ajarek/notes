@@ -4,9 +4,9 @@
     <div class="container p-2 d-flex flex-column align-items-center">
         <%notes.reverse()%>
         <%notes.forEach(note=>{%>
-        <div class="card border-secondary mb-3" style="width: 18rem;">
-            <div class="card-header"><%= note.title %></div>
-            <div class="card-body text-secondary">
+        <div class="card border-dark   mb-3" style="width: 18rem;background-color: #FFFF8D;">
+            <div class="card-header bg-warning"><%= note.title %></div>
+            <div class="card-body text-dark">
                 <p class="card-text"><%= note.content %></p>
                 <p>
                     <a href="/edit/<%=note._id%>" class="btn-sm btn-primary text-decoration-none ">edytuj</a>

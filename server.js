@@ -4,7 +4,9 @@ const mongoose=require('mongoose')
 const {port,database} = require('./config')
 const app = express()
 //databasa
-mongoose.connect(database)
+mongoose.connect(database,()=>{
+    console.log('conect database');
+})
 
 //middleware
 app.use(express.urlencoded({extended:true}))
